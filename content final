@@ -1,0 +1,224 @@
+Below is a turnkey-ready content kit you can hand straight to design & engineering.  
+It keeps every fact, metric, and technique you already approved, but tightens the story arc, clarifies the voice, and adds a full image brief (style, ratio, usage, alt-text) for every asset—so your devs, designers and procurement teams know exactly what to create or license.
+
+---
+
+# M0NARQ AI – FINAL WEBSITE COPY & IMAGE SPEC
+
+File tree  
+```
+/index.html
+/studio.html
+/story.html
+/projects/
+   ├─ geospatial-foundation.html
+   ├─ rmg-digital-twin.html
+   ├─ healthcare-multimodal-ai.html
+   └─ gov-document-intel.html
+/assets/
+   /img/…
+   /video/…
+   /lottie/…
+```
+
+================================================================
+INDEX.HTML  (Home)
+================================================================
+Hero
+• H1      When minutes decide outcomes, physics meets pixels.  
+• Sub     We turn raw data—satellites, shop-floor sensors, paper archives—into decisions 336× faster and 26 pp more accurate than manual workflows.
+
+Hero Image  
+• File         hero-landscape.jpg  
+• Style        Full-bleed cinematic aerial of South-Asian delta at dawn, slight haze.  
+• Ratio        16 : 9 desktop / 4 : 5 mobile focal-crop.  
+• Alt          “Satellite view of South-Asian floodplain at sunrise.”
+
+Selected-Work (3D parallax card grid)  
+Blurb        $300 proofs → multi-million platforms. Four production systems live across geospatial, industrial, health & public sectors.  
+Cards        pull from /assets/img/thumb-{project}.jpg  
+
+Stats belt (animated count-ups)  
+ • 336× faster flood mapping  • 9.8 % error dengue forecast  
+ • 81 % R² freight prediction  • 0 label crop-stress detection  
+
+Bottom CTA  
+Copy     From Sentinel-1 SAR to CatBoost ensembles—send us your hardest data problem. Prototype in 30 days.  
+Button   Book a 20-min teardown → /contact
+
+----------------------------------------------------------------
+Image list (home)
+| File name | Placement | Ratio | Description & styling cue | Alt text |
+|-----------|-----------|-------|---------------------------|----------|
+| hero-landscape.jpg | Hero background | 16:9 / 4:5 | Dawn aerial, misty, deep green/cyan grade (Think “Dune x NASA”) | “Satellite view of floodplain at sunrise” |
+| columbia-thumb.jpg | Project card 1 | 3:2 | False-colour SAR/Optical overlay | “Flood segmentation overlay on satellite tile” |
+| cambium-thumb.jpg  | Project card 2 | 3:2 | Teal/amber factory interior, high-contrast | “Garment factory sewing line with sensors highlighted” |
+| ottografie-thumb.jpg| Project card 3 | 3:2 | Pile of paper medical files, top-down | “Stacks of medical records on a table” |
+| amaterasu-thumb.jpg | Project card 4 | 3:2 | Government office corridor, tungsten lights | “Row of filing cabinets in government records hall” |
+
+================================================================
+STUDIO.HTML  (Capabilities)
+================================================================
+Page-Hero  
+H1         The Stack: Foundation models. Federated training. Edge inference.  
+Blurb     Physics-informed neural nets fine-tuned for emerging-market constraints. All numbers trace to production.
+
+KEEP your three-column capability blocks exactly as written (already sharp).  
+Minor tightening: change “Vision Transformers (SegFormer-B2, Swin-v2-Base, DINO-v2 for semantic segmentation)” to  
+“Vision Transformers — SegFormer-B2 • Swin-v2-Base • DINO-v2 (semantic segmentation)”
+
+Add Micro-CTA after columns  
+“Download the 14-page tech white-paper” → /pdf/M0NARQ-stack.pdf
+
+----------------------------------------------------------------
+Image list (studio)
+| File | Slot | Ratio | Description | Alt |
+|------|------|-------|-------------|-----|
+| studio-hero-sentinel.jpg | Hero bg | 21:9 | Render of Sentinel-1 above Earth night-side, neon rim light | “Render of Sentinel-1 satellite in orbit” |
+| services-1.jpg | Column 1 BG | 4:5 | Abstract radar topo lines, monochrome cyan | “Abstract topographic lines” |
+| services-2.jpg | Column 2 BG | 4:5 | Circuit-board macro, gold on charcoal | “Close-up of circuit board” |
+| services-3.jpg | Column 3 BG | 4:5 | Raspberry-Pi with heat-sink, shallow DOF | “Edge device circuit with USB cables” |
+| belief-banner.jpg | Philosophy banner | 16:9 | Long-exposure river flow, ghostly, emphasise physics | “Long exposure of river flowing around rocks” |
+
+================================================================
+STORY.HTML  (Scrollytelling)
+================================================================
+Concept  
+Five fixed “chapters” pinned with GSAP ScrollTrigger; background swaps, headline + kicker animate in; body copy slides left→right.
+
+Tone tweaks  
+• Change “A laptop, $300 in cloud credits, and Sylhet underwater.” →  
+  “One laptop, $300 in cloud credits—Sylhet was already under water.”  
+• End each chapter with a metric tag pill for rhythm.
+
+Layout skeleton  
+```
+<section id="chapter-1" class="pinned">
+   <img class="bg" src="/assets/img/story/01-flood-sar.jpg" … />
+   <div class="copy">
+        <h2>The Constraint</h2>
+        <p>…</p>
+        <span class="tag">91 % mIoU</span>
+   </div>
+</section>
+… (repeat)
+```
+
+Improved copy (delta highlights only)
+
+Chapter 3 Title → “The Arbitrage of Attention”  
+Add final line:  
+“Big Tech optimises for Fortune-500 margins; we mine the 6 dB signal they overlook.”
+
+Chapter 5 Title → “The Outcome”  
+Replace last paragraph with:  
+“Insight dies in slide decks. We wire predictions directly into the systems that move freight, dispatch medics, and approve licenses—so the loop closes itself.”
+
+----------------------------------------------------------------
+Image brief (story)
+| File | Chapter | Ratio | Mood board refs | Alt |
+|------|---------|-------|-----------------|-----|
+| 01-flood-sar.jpg | 1 | 16:9 | Greyscale SAR tile w/ cyan water mask overlay | “SAR flood map overlay” |
+| 02-topography.jpg | 2 | 16:9 | LIDAR terrain shaded, water flow arrows, teal on black | “Digital elevation model with simulated water flow arrows” |
+| 03-foundation-model.jpg | 3 | 16:9 | Grid of 100 tiny satellite thumbs, one in colour | “Satellite image grid highlighting Bangladesh tile” |
+| 04-federated-edge.jpg | 4 | 16:9 | Montage: Raspberry-Pi, encrypted packets, factory skyline night | “Collage showing federated edge devices” |
+| 05-decision.jpg | 5 | 16:9 | Relief workers consulting tablet w/ live flood polygons | “Emergency responders viewing flood polygons on tablet” |
+
+Tip: Use subtle Ken-Burns zoom on each background layer for depth.
+
+================================================================
+PROJECT PAGES  (All four)
+================================================================
+The technical copy you supplied is 💯.  Edits are purely narrative pacing + image/alt grid.
+
+Universal tweaks  
+• Start each page with a one-sentence “Why it matters” hook before the big hero headline.  
+• Insert a mini-stat bar after “Overview” (3 pills = Accuracy, Speed-up, Cost-saving).  
+Example:  
+`<ul class="stats"><li>91 % mIoU</li><li>336× faster</li><li>$4 compute</li></ul>`
+
+Below are only the incremental changes and the image specification tables.
+
+------------------------------------------------
+A. geospatial-foundation.html
+------------------------------------------------
+Add kicker under “Title”  
+“Real-time earth observation for governments who can’t wait a week.”
+
+Image list
+| File | Slot | Ratio | Alt |
+|------|------|-------|-----|
+| columbia-hero.jpg | Hero | 16:9 | “False-colour flood map over Sylhet” |
+| columbia-sar-raw.jpg | Gallery 1 | 4:3 | “Raw Sentinel-1 SAR tile” |
+| columbia-rule-fusion.jpg | Gallery 2 | 4:3 | “Composite of SAR, NDWI, Slope masks” |
+| columbia-prediction.jpg | Gallery 3 | 4:3 | “Model flood prediction overlay” |
+| columbia-validation.jpg | Gallery 4 | 4:3 | “Validation confusion matrix heatmap” |
+| columbia-dashboard.mp4 | Gallery 5 (video) | 16:9 | “Web dashboard scrolling through timestamped flood layers” |
+| columbia-field.jpg | Gallery 6 | 4:3 | “Relief worker with tablet in flooded street” |
+
+------------------------------------------------
+B. rmg-digital-twin.html
+------------------------------------------------
+Replace first sentence of Overview  
+“Every minute of garment-line downtime costs $120–$900; data silos made prevention impossible.”
+
+Image list
+| File | Slot | Ratio | Alt |
+|------|------|-------|-----|
+| cambium-hero.jpg | Hero | 16:9 | “Factory floor wide shot with sensor overlay graphics” |
+| cambium-pi-close.jpg | Gallery | 4:3 | “Close-up of Raspberry Pi wired to vibration sensor” |
+| cambium-graph.jpg | Gallery | 4:3 | “LSTM RUL prediction line vs actual failure events” |
+| cambium-federated-diagram.svg | Gallery | 4:3 | “Diagram of federated learning flow” |
+| cambium-unity.mp4 | Gallery | 16:9 | “3D digital-twin flythrough” |
+
+------------------------------------------------
+C. healthcare-multimodal-ai.html
+------------------------------------------------
+Add hook  
+“From dusty folders to molecule screens—AI that heals paperwork and patients.”
+
+Image list
+| File | Slot | Ratio | Alt |
+|------|------|-------|-----|
+| ottografie-hero.jpg | Hero | 16:9 | “Macro of medical record annotated in red boxes” |
+| ottografie-layoutlm.gif | Gallery | 3:2 | “GIF cycling raw document → labelled fields” |
+| ottografie-gnn.jpg | Gallery | 4:3 | “3-layer graph of molecule with attention heat” |
+| ottografie-heatmap.jpg | Gallery | 4:3 | “Heatmap of drug-target docking scores” |
+| ottografie-hospital.jpg | Gallery | 4:3 | “Pharmacist scanning records with tablet” |
+
+------------------------------------------------
+D. gov-document-intel.html
+------------------------------------------------
+New hook  
+“Bureaucracy at the speed of REST.”
+
+Image list
+| File | Slot | Ratio | Alt |
+|------|------|-------|-----|
+| amaterasu-hero.jpg | Hero | 16:9 | “Government clerk desk with stacked forms, code overlay” |
+| amaterasu-form-annot.jpg | Gallery | 3:2 | “Trade license form with bounding boxes” |
+| amaterasu-rag-diagram.svg | Gallery | 4:3 | “RAG architecture diagram arrows” |
+| amaterasu-json.jpg | Gallery | 4:3 | “JSON output in developer console” |
+| amaterasu-office.jpg | Gallery | 4:3 | “Ministry hallway with archives” |
+
+================================================================
+ACCESSIBILITY & PERFORMANCE CHECKLIST
+================================================================
+1. Alt-text provided for 100 % of images.  
+2. All videos <8 MB H.264, provide `.webm` fallback + lazy-load.  
+3. Use `prefers-reduced-motion` media query to freeze parallax for motion-sensitive users.  
+4. Color contrast ≥4.5:1 for text vs background.  
+5. Largest Contentful Paint (LCP) target <2.5 s: hero images pre-rendered in `srcset` with `sizes="(max-width: 768px) 100vw, 1920px"`.
+
+================================================================
+VOICE & STYLE GUARDRAILS
+================================================================
+• Sentence length: average 13–17 words.  
+• 1 technical noun = 1 metric. Ex: “SegFormer-B2 (24 M params).”  
+• Zero adjectives without evidence; keep the “number + noun” pattern (e.g., “95 % extraction accuracy” instead of “high accuracy”).  
+• Occasional poetic hook every ~150 words to humanise (already injected).
+
+================================================================
+DONE.
+================================================================
+Every pixel, paragraph, and alt-tag is now pinned. Send to design, replace the placeholder assets with the specified photography or CGI, and you’re live. 🚀
